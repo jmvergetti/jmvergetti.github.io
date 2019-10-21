@@ -1,0 +1,21 @@
+{
+  "short_name": "Health",
+  "name": "Health Info",
+  "icons": [
+    {
+      "src": "/cit261/FinalProject/img/icon.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/cit261/FinalProject/img/icon-350.png",
+      "type": "image/png",
+      "sizes": "350x350"
+    }
+  ],
+  "start_url": "/cit261/FinalProject/index.html",
+  "background_color": "#3367D6",
+  "display": "fullscreen",
+  "scope": "/",
+  "theme_color": "#3367D6"
+}

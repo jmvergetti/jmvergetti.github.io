@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+   <head>
+      <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-150561223-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-150561223-1');
+</script>
+      <title>Health Info</title>
+      <meta charset="utf-8">
+      <meta name="description" content="Get nutrition information about what you eat."> 
+      <meta name="author" content="Amon Silva">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="keywords" content="nutrition food product info information health fit fitness fat fatness">
+      <meta name="theme-color" content="#3367D6"/>
+      <link rel="manifest" href="manifest.json">
+      <!-- External resources -->
+
+      <!-- Getting google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Charm" rel="stylesheet">
+      
+      <!-- normalize -->
+      <link href="css/normalize.css" rel="stylesheet">
+
+
+      <!-- Page Style -->
+
+      <!--Main View-->
+      <link href="css/main.css" rel="stylesheet">
+
+      <!--Icon-->
+      <link rel="icon" sizes="192x192" href="img/icon.png">
+   </head>
+   <body>
+      <header>
+         <img src="img/header.jpg" alt="Header Image" title="Market Product Stand"> 
+      </header>
+      <nav>
+         <button id='btnHamburger' onclick='sideBarShow()'>&#9776;</button>
+      </nav>
+      
+      <main id="main">
+         
+         <aside id='menu'>
+            <button id="closeSideMenu" onclick="closeSideMenu()">X</button>
+            <ul>
+               <a href='./index.html' onclick="closeSideMenu()"><li>Home</li></a>
+               <a href='#favority'><li onclick="showFavority(); closeSideMenu(); getFav()">Favority</li></a>
+               <a href='#about'><li onclick="showAbout(); closeSideMenu()">About</li></a>
+            </ul>
+         </aside>
+         
+         <div id='search'>
+            <h2>Product information</h2>
+            <label for='txtSearch'>Search by product brand:</label>
+            <input type='text' id='txtSearch' placeholder='Ex.: Nutella' title='It will search the product nutrition information by it brand'>
+            <button id="btnSearch" onclick="requestJSON(this); closeSideMenu()">Search</button>
+            <img id='loading' src='img/loading.png' alt="loading">
+            <div id='result'></div>
+         </div>
+      </main>
+      
+      <div id='searchResults'>
+         <nav>
+            <button onclick="backMenu()">&#x2190;</button>
+            <h5 id="productName"></h5>
+         </nav>
+         <img id='star' onclick='toggleColors(this)' src="img/star-void.png" alt="star">
+         <div id='productContent'>Conteudo</div>
+      </div>
+      
+      <div id='divFavority'>
+         <nav>
+            <button onclick="backMenu()">&#x2190;</button>
+            <h5>Favority</h5>
+         </nav>
+         <ul>
+         </ul>
+      </div>
+      
+      <footer>
+         <nav>
+            <button onclick="backMenu()">&#x2190;</button>
+            <h5 id="productName">About</h5>
+         </nav>
+         <p>Icons (loading and star icon) made by <a href="https://www.flaticon.com/authors/icomoon" title="Icomoon">Icomoon</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+         <p id="author">Designed and developed by Amon T. B. da Silva</p>
+         <canvas></canvas>
+         <p id='copyright'>&copy; Copyright to Amon T. B. da Silva</p>
+      </footer>
+      <script src="js/sideMenuToggle.js"></script>
+      <script src="js/search.js"></script>
+      <script src="js/wayfind.js"></script>
+      <script src="js/favority.js"></script>
+      <script src="js/aboutDraw.js"></script>
+      
+   </body>
+</html>

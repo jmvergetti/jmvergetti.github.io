@@ -1,0 +1,281 @@
+/* This wildcard applies to all elements ensuring a box layout model */
+* { 
+    box-sizing: border-box; 
+    font-family: 'Raleway', sans-serif;
+}  
+img {
+    max-width: 100%;
+}
+html{
+    background-image: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+header img{
+    display: block;
+    width: 100%;
+}
+nav{
+    padding: 5px;
+    font-size: 30px;
+    background-color: rgba(222,244,133,0.6);
+}
+nav button{
+    border: none;
+    background-color: rgba(200,200,200,0);
+    transition: all 0.5s;
+}
+nav button:hover{
+    transform: rotate(90deg);
+}
+#main{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#main h2{
+    text-shadow: 2px 2px 2px #FFFFFF;
+    font-size: 26px;
+    margin: 25px 0 10px 0;
+}
+#main label{
+    font-weight: 600;
+    font-size: 18px;
+    display: block;
+}
+#main input[type='text']{
+    font-size: 18px;
+    width: 100%;
+}
+#main button{
+    font-size: 20px;
+    margin: 10px;
+    width: 100%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    background-color: rgba(246,241,100,0.7);
+    border: 1px solid #c5c54f;
+    transition: background-color 0.5s;
+}
+#main button:hover{
+    background-color: rgba(233,227,51,0.9);
+}
+#menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 70%;
+    background-color: rgb(255,255,255);
+    transition: transform 0.6s;
+    transition-timing-function: ease;
+    display: block;
+    transform: translateX(-1024px);
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+#menu ul li{
+    margin: 0;
+    padding: 15px;
+    border-bottom: 0.5px solid rgba(120, 120, 120, 0.5);
+}
+#menu ul a{
+    color: black;
+    text-decoration: none;
+}
+.active{
+    background-color: rgba(233,227,51,0.5);
+}
+#menu ul li:hover{
+    background-color: rgba(200, 120, 67,.5);
+}
+#menu #closeSideMenu{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-left: auto;
+    border: none;
+}
+#menu #closeSideMenu:hover{
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    margin-left: auto;
+    border: none;
+}
+#loading{
+    display: none;
+    width: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+@keyframes loading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+#loadmorelink{
+    text-shadow: none;
+    color: black;
+    height: 50px;
+    padding-top: 15px;
+    background-color: rgba(246,241,100,0.7);
+    border: 0.5 solid black;
+}
+#loadmorelink:hover{
+    text-shadow: none;
+    color: black;
+    height: 50px;
+    padding-top: 15px;
+    background-color: rgba(200, 120, 67,.5);
+    border: 0.5 solid black;
+}
+
+/*---------------SEARCH RESULTS STYLE AND SOME FOOTER--------------*/
+
+#searchResults, footer, #divFavority{
+    display: none;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(1024px);
+    transition: transform 0.3s;
+    background-color: white;
+    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2), 0 4px 20px 0 rgba(0,0,0,0.19);
+}
+#searchResults nav, footer nav, #divFavority nav{
+    top: 0;
+    position: sticky;
+    width: 100%;
+    padding: 15px 0; 
+}
+#searchResults nav button, footer nav button, #divFavority nav button{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    border-right: 2px solid rgba(120,120,120, 0.2);
+}
+#searchResults nav button:hover,  footer nav button:hover, #divFavority nav button:hover{
+    transform: rotate(0deg);
+}
+#searchResults h5, footer nav h5, #divFavority nav h5{
+    display: block;
+    width: 70%;
+    text-align: center;
+    margin: 0 auto auto;
+}
+#searchResults img{
+    display: block;
+    margin: 15px auto;
+}
+#searchResults #star{
+    margin: 15px auto 25px 15px;
+    width: 50px;
+}
+#searchResults p, #searchResults h3{
+    margin: 0 15px 2px;
+}
+#searchResults p{
+    text-align: justify;
+    border: 0.5px dashed black;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#result p{
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px white;
+}
+main ul{
+    list-style: none;
+    padding: 0;
+}
+main ul li{
+    text-align: center;
+    margin-bottom: 30px;
+}
+main ul li img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+main ul li a{
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18x;
+    color: rgb(255, 198, 122);
+    text-shadow:  2px 0 0 black, -2px 0 0 black, 0 2px 0 black, 0 -2px 0 black, 1px 1px black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    /*retrieved from https://stackoverflow.com/questions/13426875/text-border-using-css-border-around-text*/
+}
+main ul li:hover{
+    background-color: rgba(200, 120, 67,.5);
+}
+#result img{
+    display: block;
+    margin-left: auto;
+    margin-right:auto;
+    transition: all 0.5s;
+
+}
+#result h3{
+    font-size: 22px;
+    text-decoration: underline;
+    margin-bottom: 0;
+}
+/*-------------------------FOOTER-------------------------*/
+footer p{
+    text-align: justify;
+    margin: 15px 15px;
+}
+footer #author{
+    margin-top: 30%;
+    text-align: center;
+}
+footer #copyright{
+    margin-top: 10%;
+    text-align: center;
+}
+footer canvas{
+    width: 100%;
+}
+/*-------------------------Favority-------------------------*/
+#divFavority ul{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+    flex-flow: row wrap;
+}
+#divFavority ul li{
+    margin: 30px;
+}
+#divFavority ul li img{
+    display: block;
+    vertical-align: middle;
+    width: 64px;
+}
+#divFavority ul li a{
+    display: block;
+    text-decoration: none;
+    width: 64px;
+    text-align: center;
+}
